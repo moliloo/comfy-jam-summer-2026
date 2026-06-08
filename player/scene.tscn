@@ -1,0 +1,21 @@
+[gd_scene format=3 uid="uid://ddssqu3a5opg"]
+
+[ext_resource type="Script" uid="uid://dup67s0p7wn5k" path="res://player/script.gd" id="1_bjm4x"]
+[ext_resource type="Texture2D" uid="uid://cgvuof1cxjf4n" path="res://assets/temporary/haru_cry.png" id="2_6xyil"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_ewkwu"]
+size = Vector2(96, 90)
+
+[node name="Player" type="CharacterBody2D" unique_id=72670545 node_paths=PackedStringArray("sprite")]
+script = ExtResource("1_bjm4x")
+sprite = NodePath("Sprite2D")
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=1692762879]
+position = Vector2(-1.1920929e-07, -1.1920929e-06)
+scale = Vector2(0.2, 0.2)
+texture = ExtResource("2_6xyil")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=564034507]
+shape = SubResource("RectangleShape2D_ewkwu")
+
+[node name="Camera2D" type="Camera2D" parent="." unique_id=998682672]

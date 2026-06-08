@@ -1,0 +1,12 @@
+[gd_scene format=3 uid="uid://gpuat04v80d3"]
+
+[ext_resource type="PackedScene" uid="uid://ddssqu3a5opg" path="res://player/scene.tscn" id="1_k588i"]
+[ext_resource type="PackedScene" uid="uid://cgepphevhcbu8" path="res://cute_horror/aquarium/scene.tscn" id="2_4rfli"]
+
+[node name="Scene" type="Node2D" unique_id=59418411]
+
+[node name="Player" parent="." unique_id=72670545 instance=ExtResource("1_k588i")]
+position = Vector2(566, 324)
+
+[node name="Aquarium" parent="." unique_id=808837739 instance=ExtResource("2_4rfli")]
+position = Vector2(571, 45)

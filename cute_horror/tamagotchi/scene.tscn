@@ -1,0 +1,39 @@
+[gd_scene format=3 uid="uid://c882l83e2iigc"]
+
+[ext_resource type="Texture2D" uid="uid://ca27sl1uh5sft" path="res://assets/temporary/aquarium.jpg" id="1_h7ui0"]
+[ext_resource type="Script" uid="uid://dwj155flec6j2" path="res://cute_horror/tamagotchi/script.gd" id="1_wia8b"]
+
+[node name="Tamagochi" type="Node2D" unique_id=548957400]
+script = ExtResource("1_wia8b")
+
+[node name="Aquarium" type="Sprite2D" parent="." unique_id=880607100]
+position = Vector2(567, 320.99997)
+scale = Vector2(3.5191255, 3.5191257)
+texture = ExtResource("1_h7ui0")
+
+[node name="Camera2D" type="Camera2D" parent="." unique_id=1060586885]
+position = Vector2(576, 326)
+
+[node name="CanvasLayer" type="CanvasLayer" parent="." unique_id=408346995]
+
+[node name="Button" type="Button" parent="CanvasLayer" unique_id=1373822654]
+anchors_preset = 7
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+offset_left = -56.0
+offset_top = -45.0
+offset_right = 59.0
+grow_horizontal = 2
+grow_vertical = 0
+
+[node name="Label" type="Label" parent="CanvasLayer/Button" unique_id=2014196169]
+layout_mode = 0
+offset_right = 57.0
+offset_bottom = 23.0
+scale = Vector2(2, 2)
+text = "Exit"
+horizontal_alignment = 1
+
+[connection signal="pressed" from="CanvasLayer/Button" to="." method="_on_button_pressed"]
