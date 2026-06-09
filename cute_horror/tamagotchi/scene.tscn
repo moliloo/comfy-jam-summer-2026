@@ -3,8 +3,11 @@
 [ext_resource type="Texture2D" uid="uid://ca27sl1uh5sft" path="res://assets/temporary/aquarium.jpg" id="1_h7ui0"]
 [ext_resource type="Script" uid="uid://dwj155flec6j2" path="res://cute_horror/tamagotchi/script.gd" id="1_wia8b"]
 
-[node name="Tamagochi" type="Node2D" unique_id=548957400]
+[node name="Tamagochi" type="Node2D" unique_id=548957400 node_paths=PackedStringArray("food_bar", "fun_bar", "comfy_bar")]
 script = ExtResource("1_wia8b")
+food_bar = NodePath("LayerBack/progress_bars/Vbox/food_bar")
+fun_bar = NodePath("LayerBack/progress_bars/Vbox/fun_bar")
+comfy_bar = NodePath("LayerBack/progress_bars/Vbox/comfy_bar")
 
 [node name="Aquarium" type="Sprite2D" parent="." unique_id=880607100]
 position = Vector2(567, 320.99997)
@@ -14,9 +17,51 @@ texture = ExtResource("1_h7ui0")
 [node name="Camera2D" type="Camera2D" parent="." unique_id=1060586885]
 position = Vector2(576, 326)
 
-[node name="CanvasLayer" type="CanvasLayer" parent="." unique_id=408346995]
+[node name="LayerBack" type="CanvasLayer" parent="." unique_id=253704896]
 
-[node name="Button" type="Button" parent="CanvasLayer" unique_id=1373822654]
+[node name="progress_bars" type="PanelContainer" parent="LayerBack" unique_id=76475440]
+self_modulate = Color(1, 1, 1, 0)
+anchors_preset = 2
+anchor_top = 1.0
+anchor_bottom = 1.0
+offset_top = -150.0
+offset_right = 300.0
+grow_vertical = 0
+
+[node name="Vbox" type="VBoxContainer" parent="LayerBack/progress_bars" unique_id=1039616335]
+layout_mode = 2
+
+[node name="food_label" type="Label" parent="LayerBack/progress_bars/Vbox" unique_id=1089101884]
+layout_mode = 2
+text = "Food:"
+horizontal_alignment = 1
+
+[node name="food_bar" type="ProgressBar" parent="LayerBack/progress_bars/Vbox" unique_id=821256304]
+layout_mode = 2
+step = 1.0
+
+[node name="fun_label" type="Label" parent="LayerBack/progress_bars/Vbox" unique_id=459845203]
+layout_mode = 2
+text = "Fun:"
+horizontal_alignment = 1
+
+[node name="fun_bar" type="ProgressBar" parent="LayerBack/progress_bars/Vbox" unique_id=68308585]
+layout_mode = 2
+step = 1.0
+
+[node name="comfy_label" type="Label" parent="LayerBack/progress_bars/Vbox" unique_id=1258468130]
+layout_mode = 2
+text = "Comfy"
+horizontal_alignment = 1
+
+[node name="comfy_bar" type="ProgressBar" parent="LayerBack/progress_bars/Vbox" unique_id=1744235320]
+layout_mode = 2
+step = 1.0
+
+[node name="LayerFront" type="CanvasLayer" parent="." unique_id=408346995]
+layer = 2
+
+[node name="Button" type="Button" parent="LayerFront" unique_id=1373822654]
 anchors_preset = 7
 anchor_left = 0.5
 anchor_top = 1.0
@@ -28,7 +73,7 @@ offset_right = 59.0
 grow_horizontal = 2
 grow_vertical = 0
 
-[node name="Label" type="Label" parent="CanvasLayer/Button" unique_id=2014196169]
+[node name="Label" type="Label" parent="LayerFront/Button" unique_id=2014196169]
 layout_mode = 0
 offset_right = 57.0
 offset_bottom = 23.0
@@ -36,4 +81,4 @@ scale = Vector2(2, 2)
 text = "Exit"
 horizontal_alignment = 1
 
-[connection signal="pressed" from="CanvasLayer/Button" to="." method="_on_button_pressed"]
+[connection signal="pressed" from="LayerFront/Button" to="." method="_on_button_pressed"]
