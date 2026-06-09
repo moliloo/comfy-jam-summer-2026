@@ -1,0 +1,17 @@
+[gd_scene format=3 uid="uid://dlxwnbbcb7mly"]
+
+[ext_resource type="Script" uid="uid://do0elsl0tq24h" path="res://ui/day_night_cycle_ui/script.gd" id="1_kqtg5"]
+
+[node name="DayNightCycleUI" type="Control" unique_id=1135673272]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_kqtg5")
+
+[node name="Label" type="Label" parent="." unique_id=1157291504]
+layout_mode = 0
+offset_right = 40.0
+offset_bottom = 23.0

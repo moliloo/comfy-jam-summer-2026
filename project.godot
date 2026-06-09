@@ -24,7 +24,8 @@ folder_colors={
 "res://cute_horror/": "red",
 "res://cute_horror/tamagotchi/": "red",
 "res://player/": "blue",
-"res://script/": "yellow"
+"res://script/": "yellow",
+"res://ui/": "green"
 }
 
 [input]
