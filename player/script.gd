@@ -7,6 +7,8 @@ var SPEED: float = 400;
 var direction: Vector2 = Vector2(0, 0);
 
 func _ready() -> void:
+	if GlobalVariables.get_player_position():
+		set_global_position(GlobalVariables.get_player_position());
 	pass
 
 func _process(delta: float) -> void:

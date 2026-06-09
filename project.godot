@@ -14,12 +14,17 @@ config/name="My Tomoda Horror"
 config/features=PackedStringArray("4.6", "Forward Plus")
 config/icon="res://icon.svg"
 
+[autoload]
+
+GlobalVariables="*uid://c7x2tf0shvbyo"
+
 [file_customization]
 
 folder_colors={
 "res://cute_horror/": "red",
 "res://cute_horror/tamagotchi/": "red",
-"res://player/": "blue"
+"res://player/": "blue",
+"res://script/": "yellow"
 }
 
 [input]
