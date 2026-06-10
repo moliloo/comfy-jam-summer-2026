@@ -1,6 +1,6 @@
 [gd_scene format=3 uid="uid://ddssqu3a5opg"]
 
-[ext_resource type="Script" uid="uid://dup67s0p7wn5k" path="res://player/script.gd" id="1_bjm4x"]
+[ext_resource type="Script" uid="uid://dup67s0p7wn5k" path="res://player/player.gd" id="1_bjm4x"]
 [ext_resource type="Texture2D" uid="uid://cgvuof1cxjf4n" path="res://assets/temporary/haru_cry.png" id="2_6xyil"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_ewkwu"]

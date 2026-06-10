@@ -1,18 +1,18 @@
 [gd_scene format=3 uid="uid://c882l83e2iigc"]
 
-[ext_resource type="Texture2D" uid="uid://ca27sl1uh5sft" path="res://assets/temporary/aquarium.jpg" id="1_h7ui0"]
-[ext_resource type="Script" uid="uid://dwj155flec6j2" path="res://cute_horror/tamagotchi/script.gd" id="1_wia8b"]
+[ext_resource type="Script" uid="uid://dwj155flec6j2" path="res://cute_horror/tamagotchi/script.gd" id="1_a85fx"]
+[ext_resource type="Texture2D" uid="uid://bb25i7b2rfwy6" path="res://assets/cute_horror/aquarium/aquarium.png" id="2_qpwil"]
 
 [node name="Tamagochi" type="Node2D" unique_id=548957400 node_paths=PackedStringArray("food_bar", "fun_bar", "comfy_bar")]
-script = ExtResource("1_wia8b")
+script = ExtResource("1_a85fx")
 food_bar = NodePath("LayerBack/progress_bars/Vbox/food_bar")
 fun_bar = NodePath("LayerBack/progress_bars/Vbox/fun_bar")
 comfy_bar = NodePath("LayerBack/progress_bars/Vbox/comfy_bar")
 
 [node name="Aquarium" type="Sprite2D" parent="." unique_id=880607100]
-position = Vector2(567, 320.99997)
-scale = Vector2(3.5191255, 3.5191257)
-texture = ExtResource("1_h7ui0")
+position = Vector2(580.8525, 330.23492)
+scale = Vector2(3.6345627, 3.634563)
+texture = ExtResource("2_qpwil")
 
 [node name="Camera2D" type="Camera2D" parent="." unique_id=1060586885]
 position = Vector2(576, 326)
