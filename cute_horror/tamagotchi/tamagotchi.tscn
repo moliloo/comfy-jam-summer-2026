@@ -1,6 +1,6 @@
 [gd_scene format=3 uid="uid://c882l83e2iigc"]
 
-[ext_resource type="Script" uid="uid://dwj155flec6j2" path="res://cute_horror/tamagotchi/script.gd" id="1_a85fx"]
+[ext_resource type="Script" uid="uid://dwj155flec6j2" path="res://cute_horror/tamagotchi/tamagotchi.gd" id="1_a85fx"]
 [ext_resource type="Texture2D" uid="uid://bb25i7b2rfwy6" path="res://assets/cute_horror/aquarium/aquarium.png" id="2_qpwil"]
 
 [node name="Tamagochi" type="Node2D" unique_id=548957400 node_paths=PackedStringArray("food_bar", "fun_bar", "comfy_bar")]

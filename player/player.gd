@@ -14,18 +14,18 @@ func _process(_delta: float) -> void:
 	move_player()
 
 func move_player() -> void:
-	if Input.is_action_pressed('move_left'):
+	if Input.is_action_pressed('move_right'):
 		sprite.flip_h = false;
 		direction.x = 1;
-	elif Input.is_action_pressed('move_right'):
+	elif Input.is_action_pressed('move_left'):
 		sprite.flip_h = true;
 		direction.x = -1;
 	else: 
 		direction.x = 0;
 
-	if Input.is_action_pressed('move_down'):
+	if Input.is_action_pressed('move_up'):
 		direction.y = -1;
-	elif Input.is_action_pressed('move_up'):
+	elif Input.is_action_pressed('move_down'):
 		direction.y = 1;
 	else: 
 		direction.y = 0;
