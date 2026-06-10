@@ -1,7 +1,7 @@
 [gd_scene format=3 uid="uid://c882l83e2iigc"]
 
 [ext_resource type="Texture2D" uid="uid://ca27sl1uh5sft" path="res://assets/temporary/aquarium.jpg" id="1_h7ui0"]
-[ext_resource type="Script" uid="uid://dwj155flec6j2" path="res://cute_horror/tamagotchi/script.gd" id="1_wia8b"]
+[ext_resource type="Script" uid="uid://dwj155flec6j2" path="res://cute_horror/tamagotchi/tamagotchi.gd" id="1_wia8b"]
 
 [node name="Tamagochi" type="Node2D" unique_id=548957400 node_paths=PackedStringArray("food_bar", "fun_bar", "comfy_bar")]
 script = ExtResource("1_wia8b")

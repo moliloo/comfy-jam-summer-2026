@@ -1,6 +1,6 @@
 [gd_scene format=3 uid="uid://d3yto25umyk0d"]
 
-[ext_resource type="Script" uid="uid://dtf8ouwpeoprt" path="res://scenes/day_summary/script.gd" id="1_5jmor"]
+[ext_resource type="Script" uid="uid://dtf8ouwpeoprt" path="res://scenes/day_summary/day_summary.gd" id="1_5jmor"]
 
 [sub_resource type="Gradient" id="Gradient_5jmor"]
 colors = PackedColorArray(0.21960784, 0.21960784, 0.21960784, 1, 0.21907826, 0.21907826, 0.21907826, 1)

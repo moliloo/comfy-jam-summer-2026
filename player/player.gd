@@ -38,4 +38,4 @@ func move_player() -> void:
 func _on_midnight():
 	GlobalVariables.set_player_position(get_global_position())
 	day_night_cycle.next_day()
-	get_tree().change_scene_to_file('res://scenes/day_summary/scene.tscn')
+	get_tree().change_scene_to_file('res://scenes/day_summary/day_summary.tscn')
