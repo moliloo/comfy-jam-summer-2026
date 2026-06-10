@@ -1,0 +1,37 @@
+[gd_scene format=3 uid="uid://d3yto25umyk0d"]
+
+[ext_resource type="Script" uid="uid://dtf8ouwpeoprt" path="res://scenes/day_summary/script.gd" id="1_5jmor"]
+
+[sub_resource type="Gradient" id="Gradient_5jmor"]
+colors = PackedColorArray(0.21960784, 0.21960784, 0.21960784, 1, 0.21907826, 0.21907826, 0.21907826, 1)
+
+[sub_resource type="GradientTexture1D" id="GradientTexture1D_5r7hn"]
+gradient = SubResource("Gradient_5jmor")
+
+[node name="DailySummary" type="Node2D" unique_id=1856163564]
+script = ExtResource("1_5jmor")
+
+[node name="TextureRect" type="TextureRect" parent="." unique_id=1688189802]
+offset_right = 1147.0
+offset_bottom = 647.0
+texture = SubResource("GradientTexture1D_5r7hn")
+
+[node name="BoxContainer" type="BoxContainer" parent="." unique_id=1405909014]
+offset_left = 443.0
+offset_top = 258.0
+offset_right = 527.0
+offset_bottom = 287.0
+
+[node name="Button" type="Button" parent="BoxContainer" unique_id=23678548]
+custom_minimum_size = Vector2(140, 0)
+layout_mode = 2
+
+[node name="Label" type="Label" parent="BoxContainer/Button" unique_id=650019505]
+layout_mode = 0
+offset_left = 29.0
+offset_top = 1.0
+offset_right = 109.0
+offset_bottom = 32.0
+text = "Next Day"
+
+[connection signal="pressed" from="BoxContainer/Button" to="." method="_on_button_pressed"]

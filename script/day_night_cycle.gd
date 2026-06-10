@@ -44,3 +44,13 @@ func _recalc_time() -> void:
 		past_minute = minute
 		time_tick.emit(day, hour, minute)
 		GlobalVariables.save_time(time)
+
+func next_day():
+	GlobalVariables.set_day_count()
+	var day_count = GlobalVariables.get_day_count()
+	
+	var total_minutes: int = day_count * MINUTES_PER_DAY + INITIAL_HOUR * MINUTES_PER_HOUR
+	var new_time: float = float(total_minutes) * IN_GAME_TO_REAL_MINUTE_DURATION
+	
+	time = new_time 
+	GlobalVariables.save_time(new_time)

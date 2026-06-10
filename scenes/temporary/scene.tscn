@@ -6,6 +6,7 @@
 [ext_resource type="PackedScene" uid="uid://cgepphevhcbu8" path="res://cute_horror/aquarium/scene.tscn" id="2_4rfli"]
 [ext_resource type="Texture2D" uid="uid://bkpc1kjm4t2xn" path="res://assets/daynightcycle-gradient-texture.tres" id="2_7jgaf"]
 [ext_resource type="PackedScene" uid="uid://dlxwnbbcb7mly" path="res://ui/day_night_cycle_ui/scene.tscn" id="5_d0dyj"]
+[ext_resource type="PackedScene" uid="uid://bijp5ebkpa37" path="res://items/bed/scene.tscn" id="7_brd7f"]
 
 [node name="Scene" type="Node2D" unique_id=59418411]
 script = ExtResource("1_bqjnb")
@@ -24,3 +25,7 @@ position = Vector2(571, 45)
 
 [node name="DayNightCycleUI" parent="UI" unique_id=1135673272 node_paths=PackedStringArray("day_cycle") instance=ExtResource("5_d0dyj")]
 day_cycle = NodePath("../../CanvasModulate")
+
+[node name="Bed" parent="." unique_id=1066886043 node_paths=PackedStringArray("day_night_cycle") instance=ExtResource("7_brd7f")]
+position = Vector2(144, 347)
+day_night_cycle = NodePath("../CanvasModulate")
