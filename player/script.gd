@@ -2,6 +2,7 @@ extends CharacterBody2D
 class_name Player
 
 @export var sprite: Sprite2D
+@export var day_night_cycle: DayNightCycle
 
 var SPEED: float = 400;
 var direction: Vector2 = Vector2(0, 0);
@@ -9,6 +10,7 @@ var direction: Vector2 = Vector2(0, 0);
 func _ready() -> void:
 	if GlobalVariables.get_player_position():
 		set_global_position(GlobalVariables.get_player_position());
+	day_night_cycle.midnight.connect(_on_midnight)
 
 func _process(delta: float) -> void:
 	move_player()
@@ -32,3 +34,8 @@ func move_player() -> void:
 
 	velocity = direction.normalized() * SPEED;
 	move_and_slide();
+
+func _on_midnight():
+	GlobalVariables.set_player_position(get_global_position())
+	day_night_cycle.next_day()
+	get_tree().change_scene_to_file('res://scenes/day_summary/scene.tscn')

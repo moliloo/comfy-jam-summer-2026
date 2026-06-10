@@ -15,8 +15,9 @@ script = ExtResource("1_bqjnb")
 script = ExtResource("1_8ndbb")
 gradient = ExtResource("2_7jgaf")
 
-[node name="Player" parent="." unique_id=72670545 instance=ExtResource("1_k588i")]
+[node name="Player" parent="." unique_id=72670545 node_paths=PackedStringArray("day_night_cycle") instance=ExtResource("1_k588i")]
 position = Vector2(566, 324)
+day_night_cycle = NodePath("../CanvasModulate")
 
 [node name="Aquarium" parent="." unique_id=808837739 instance=ExtResource("2_4rfli")]
 position = Vector2(571, 45)

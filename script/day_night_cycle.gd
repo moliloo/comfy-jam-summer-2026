@@ -6,6 +6,7 @@ const MINUTES_PER_HOUR = 60;
 const IN_GAME_TO_REAL_MINUTE_DURATION = (2 * PI) / MINUTES_PER_DAY
 
 signal time_tick(day: int, hour: int, minute: int)
+signal midnight
 
 @export var gradient: GradientTexture1D
 @export var IN_GAME_SPEED: float = 1.0
@@ -44,6 +45,9 @@ func _recalc_time() -> void:
 		past_minute = minute
 		time_tick.emit(day, hour, minute)
 		GlobalVariables.save_time(time)
+	
+	if hour == 0:
+		midnight.emit()
 
 func next_day():
 	GlobalVariables.set_day_count()
@@ -54,3 +58,11 @@ func next_day():
 	
 	time = new_time 
 	GlobalVariables.save_time(new_time)
+
+func next_day_intial_hour():
+	var total_minutes: int = 1* MINUTES_PER_DAY + INITIAL_HOUR * MINUTES_PER_HOUR
+	var new_time: float = float(total_minutes) * IN_GAME_TO_REAL_MINUTE_DURATION
+	
+	time = new_time 
+	GlobalVariables.save_time(new_time)
+	
