@@ -26,5 +26,4 @@ func _input(event: InputEvent) -> void:
 			BUBBLE.texture = buble_texture.pick_random()
 			BUBBLE.position = get_local_mouse_position()
 			if BUBBLE.position.x >= bubbles_destroy.x and BUBBLE.position.x <= bubbles_destroy_2.x and BUBBLE.position.y <= bubbles_destroy_2.y:
-				print(BUBBLE.position)
 				add_child(BUBBLE)
