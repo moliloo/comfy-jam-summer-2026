@@ -1,14 +1,23 @@
-[gd_scene format=3 uid="uid://gpuat04v80d3"]
+[gd_scene format=3 uid="uid://bucjox2ojt4gi"]
 
-[ext_resource type="Script" uid="uid://b0bmojtc28oli" path="res://scenes/temporary/test.gd" id="1_73plb"]
 [ext_resource type="Script" uid="uid://bl13ut312gvl8" path="res://script/day_night_cycle.gd" id="2_uupms"]
 [ext_resource type="Texture2D" uid="uid://bkpc1kjm4t2xn" path="res://assets/daynightcycle-gradient-texture.tres" id="3_xqgyu"]
 [ext_resource type="PackedScene" uid="uid://ddssqu3a5opg" path="res://player/player.tscn" id="4_485p1"]
 [ext_resource type="PackedScene" uid="uid://cgepphevhcbu8" path="res://cute_horror/aquarium/aquarium.tscn" id="5_3t735"]
 [ext_resource type="PackedScene" uid="uid://dlxwnbbcb7mly" path="res://ui/day_night_cycle_ui/cycle_ui.tscn" id="6_f7chd"]
 
+[sub_resource type="GDScript" id="GDScript_mmomo"]
+script/source = "extends Node2D
+
+@onready var canvas_layer: CanvasLayer = $UI
+@onready var ui = $UI/DayNightCycleUI
+
+func _ready() -> void:
+	canvas_layer.visible = true
+"
+
 [node name="Scene" type="Node2D" unique_id=59418411]
-script = ExtResource("1_73plb")
+script = SubResource("GDScript_mmomo")
 
 [node name="CanvasModulate" type="CanvasModulate" parent="." unique_id=246475648]
 script = ExtResource("2_uupms")
