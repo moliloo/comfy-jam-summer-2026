@@ -1,0 +1,32 @@
+[gd_scene format=3 uid="uid://gpuat04v80d3"]
+
+[ext_resource type="Script" uid="uid://b0bmojtc28oli" path="res://scenes/temporary/temporary.gd" id="1_j5sq7"]
+[ext_resource type="Script" uid="uid://bl13ut312gvl8" path="res://script/day_night_cycle.gd" id="2_dkmeo"]
+[ext_resource type="Texture2D" uid="uid://bkpc1kjm4t2xn" path="res://assets/daynightcycle-gradient-texture.tres" id="3_wthr8"]
+[ext_resource type="PackedScene" uid="uid://ddssqu3a5opg" path="res://player/player.tscn" id="4_f32gb"]
+[ext_resource type="PackedScene" uid="uid://cgepphevhcbu8" path="res://cute_horror/aquarium/aquarium.tscn" id="5_qqtqm"]
+[ext_resource type="PackedScene" uid="uid://dlxwnbbcb7mly" path="res://ui/day_night_cycle_ui/cycle_ui.tscn" id="6_mfogc"]
+[ext_resource type="PackedScene" uid="uid://bijp5ebkpa37" path="res://items/bed/bed.tscn" id="7_1wl4m"]
+
+[node name="Scene" type="Node2D" unique_id=59418411]
+script = ExtResource("1_j5sq7")
+
+[node name="CanvasModulate" type="CanvasModulate" parent="." unique_id=246475648]
+script = ExtResource("2_dkmeo")
+gradient = ExtResource("3_wthr8")
+
+[node name="Player" parent="." unique_id=72670545 node_paths=PackedStringArray("day_night_cycle") instance=ExtResource("4_f32gb")]
+position = Vector2(566, 324)
+day_night_cycle = NodePath("../CanvasModulate")
+
+[node name="Aquarium" parent="." unique_id=808837739 instance=ExtResource("5_qqtqm")]
+position = Vector2(571, 45)
+
+[node name="UI" type="CanvasLayer" parent="." unique_id=1580314821]
+
+[node name="DayNightCycleUI" parent="UI" unique_id=1135673272 node_paths=PackedStringArray("day_cycle") instance=ExtResource("6_mfogc")]
+day_cycle = NodePath("../../CanvasModulate")
+
+[node name="Bed" parent="." unique_id=1066886043 node_paths=PackedStringArray("day_night_cycle") instance=ExtResource("7_1wl4m")]
+position = Vector2(144, 347)
+day_night_cycle = NodePath("../CanvasModulate")
