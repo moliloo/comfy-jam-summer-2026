@@ -2,6 +2,7 @@
 
 [ext_resource type="Script" uid="uid://dwj155flec6j2" path="res://cute_horror/tamagotchi/tamagotchi.gd" id="1_a85fx"]
 [ext_resource type="Texture2D" uid="uid://bb25i7b2rfwy6" path="res://assets/cute_horror/aquarium/aquarium.png" id="2_qpwil"]
+[ext_resource type="Script" uid="uid://65xo0ulvirby" path="res://cute_horror/tamagotchi/bubbles.gd" id="3_qpwil"]
 
 [node name="Tamagochi" type="Node2D" unique_id=548957400 node_paths=PackedStringArray("food_bar", "fun_bar", "comfy_bar")]
 script = ExtResource("1_a85fx")
@@ -80,5 +81,16 @@ offset_bottom = 23.0
 scale = Vector2(2, 2)
 text = "Exit"
 horizontal_alignment = 1
+
+[node name="RandomActivity" type="Node" parent="." unique_id=2053293737]
+
+[node name="bubbles" type="Node2D" parent="RandomActivity" unique_id=801334849]
+script = ExtResource("3_qpwil")
+
+[node name="bubbles_destroy" type="Node2D" parent="RandomActivity" unique_id=643546297]
+position = Vector2(193, 101)
+
+[node name="bubbles_destroy2" type="Node2D" parent="RandomActivity" unique_id=139954188]
+position = Vector2(968, 573)
 
 [connection signal="pressed" from="LayerFront/Button" to="." method="_on_button_pressed"]
