@@ -8,6 +8,7 @@ var SPEED: float = 400;
 var direction: Vector2 = Vector2(0, 0);
 var interacting : bool = false
 var ended_animation := true
+
 func _ready() -> void:
 	if GlobalVariables.get_player_position():
 		set_global_position(GlobalVariables.get_player_position());
@@ -38,11 +39,11 @@ func move_player() -> void:
 
 	if Input.is_action_pressed('move_up'):
 		sprite.play("walk_up")
-		ended_animation = 0
+		ended_animation = false
 		direction.y = -1;
 	elif Input.is_action_pressed('move_down'):
 		sprite.play("walk_down")
-		ended_animation = 0
+		ended_animation = false
 		direction.y = 1;
 	else: 
 		direction.y = 0;
@@ -50,7 +51,7 @@ func move_player() -> void:
 	if  direction == Vector2(0,0):
 		sprite.frame = 0
 	if sprite.animation in ["walk_down","walk_up"] and direction.y == 0:
-		ended_animation = 1
+		ended_animation = true
 	
 	velocity = direction.normalized() * SPEED;
 	move_and_slide();
