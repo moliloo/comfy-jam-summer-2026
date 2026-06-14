@@ -1,9 +1,9 @@
 extends Node2D
 class_name Tamagochi
 
-@export var food_bar: ProgressBar
-@export var fun_bar: ProgressBar
-@export var comfy_bar: ProgressBar
+@export var food_bar: TextureProgressBar
+@export var fun_bar: TextureProgressBar
+@export var comfy_bar: TextureProgressBar
 
 static var food : float 
 static var fun : float 

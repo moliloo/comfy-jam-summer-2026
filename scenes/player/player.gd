@@ -4,6 +4,7 @@ class_name Player
 @export var sprite: AnimatedSprite2D
 @export var day_night_cycle: DayNightCycle
 
+
 var SPEED: float = 400;
 var direction: Vector2 = Vector2(0, 0);
 var interacting : bool = false

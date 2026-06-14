@@ -2,6 +2,7 @@
 
 [ext_resource type="Script" uid="uid://b0bmojtc28oli" path="res://scenes/temporary/temporary.gd" id="1_j5sq7"]
 [ext_resource type="Script" uid="uid://bl13ut312gvl8" path="res://script/day_night_cycle.gd" id="2_dkmeo"]
+[ext_resource type="PackedScene" uid="uid://bucjox2ojt4gi" path="res://scenes/beach.tscn" id="2_wthr8"]
 [ext_resource type="Texture2D" uid="uid://bkpc1kjm4t2xn" path="res://assets/daynightcycle-gradient-texture.tres" id="3_wthr8"]
 [ext_resource type="PackedScene" uid="uid://ddssqu3a5opg" path="res://scenes/player/player.tscn" id="4_f32gb"]
 [ext_resource type="PackedScene" uid="uid://cgepphevhcbu8" path="res://scenes/aquarium/aquarium.tscn" id="5_qqtqm"]
@@ -10,6 +11,10 @@
 
 [node name="Scene" type="Node2D" unique_id=59418411]
 script = ExtResource("1_j5sq7")
+
+[node name="Beach" parent="." unique_id=468222948 instance=ExtResource("2_wthr8")]
+position = Vector2(196.00003, 76)
+scale = Vector2(3, 3)
 
 [node name="CanvasModulate" type="CanvasModulate" parent="." unique_id=246475648]
 script = ExtResource("2_dkmeo")

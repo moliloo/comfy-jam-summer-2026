@@ -2,13 +2,17 @@
 
 [ext_resource type="Script" uid="uid://dwj155flec6j2" path="res://scenes/tamagotchi/tamagotchi.gd" id="1_a85fx"]
 [ext_resource type="Texture2D" uid="uid://bb25i7b2rfwy6" path="res://assets/aquarium/aquarium.png" id="2_qpwil"]
+[ext_resource type="Texture2D" uid="uid://c5835yja0a17k" path="res://assets/ui/ui_hungerBar.png" id="3_e0u57"]
 [ext_resource type="Script" uid="uid://65xo0ulvirby" path="res://scenes/tamagotchi/bubbles.gd" id="3_qpwil"]
+[ext_resource type="Texture2D" uid="uid://domdcouefu8uj" path="res://assets/ui/uibar.png" id="4_lw85q"]
+[ext_resource type="Texture2D" uid="uid://yhv5oy3qrvfp" path="res://assets/ui/ui_funBar.png" id="5_wgfew"]
+[ext_resource type="Texture2D" uid="uid://2pnltcwwijb" path="res://assets/ui/ui_comfyBar.png" id="6_q0dh5"]
 
 [node name="Tamagochi" type="Node2D" unique_id=548957400 node_paths=PackedStringArray("food_bar", "fun_bar", "comfy_bar")]
 script = ExtResource("1_a85fx")
-food_bar = NodePath("LayerBack/progress_bars/Vbox/food_bar")
-fun_bar = NodePath("LayerBack/progress_bars/Vbox/fun_bar")
-comfy_bar = NodePath("LayerBack/progress_bars/Vbox/comfy_bar")
+food_bar = NodePath("LayerBack/progress_bars/Vbox/TextureRect/food_bar")
+fun_bar = NodePath("LayerBack/progress_bars/Vbox/TextureRect2/fun_bar")
+comfy_bar = NodePath("LayerBack/progress_bars/Vbox/TextureRect3/comfy_bar")
 
 [node name="Aquarium" type="Sprite2D" parent="." unique_id=880607100]
 position = Vector2(580.8525, 330.23492)
@@ -32,32 +36,50 @@ grow_vertical = 0
 [node name="Vbox" type="VBoxContainer" parent="LayerBack/progress_bars" unique_id=1039616335]
 layout_mode = 2
 
-[node name="food_label" type="Label" parent="LayerBack/progress_bars/Vbox" unique_id=1089101884]
+[node name="TextureRect" type="TextureRect" parent="LayerBack/progress_bars/Vbox" unique_id=214713216]
 layout_mode = 2
-text = "Food:"
-horizontal_alignment = 1
+texture = ExtResource("3_e0u57")
+expand_mode = 5
 
-[node name="food_bar" type="ProgressBar" parent="LayerBack/progress_bars/Vbox" unique_id=821256304]
-layout_mode = 2
-step = 1.0
+[node name="food_bar" type="TextureProgressBar" parent="LayerBack/progress_bars/Vbox/TextureRect" unique_id=1171065226]
+layout_mode = 0
+offset_left = 37.0
+offset_top = 36.999992
+offset_right = 263.0
+offset_bottom = 75.99999
+value = 100.0
+nine_patch_stretch = true
+texture_progress = ExtResource("4_lw85q")
 
-[node name="fun_label" type="Label" parent="LayerBack/progress_bars/Vbox" unique_id=459845203]
+[node name="TextureRect2" type="TextureRect" parent="LayerBack/progress_bars/Vbox" unique_id=810010981]
 layout_mode = 2
-text = "Fun:"
-horizontal_alignment = 1
+texture = ExtResource("5_wgfew")
+expand_mode = 5
 
-[node name="fun_bar" type="ProgressBar" parent="LayerBack/progress_bars/Vbox" unique_id=68308585]
-layout_mode = 2
-step = 1.0
+[node name="fun_bar" type="TextureProgressBar" parent="LayerBack/progress_bars/Vbox/TextureRect2" unique_id=774600944]
+layout_mode = 0
+offset_left = 37.0
+offset_top = 36.999992
+offset_right = 263.0
+offset_bottom = 75.99999
+value = 100.0
+nine_patch_stretch = true
+texture_progress = ExtResource("4_lw85q")
 
-[node name="comfy_label" type="Label" parent="LayerBack/progress_bars/Vbox" unique_id=1258468130]
+[node name="TextureRect3" type="TextureRect" parent="LayerBack/progress_bars/Vbox" unique_id=517109120]
 layout_mode = 2
-text = "Comfy"
-horizontal_alignment = 1
+texture = ExtResource("6_q0dh5")
+expand_mode = 5
 
-[node name="comfy_bar" type="ProgressBar" parent="LayerBack/progress_bars/Vbox" unique_id=1744235320]
-layout_mode = 2
-step = 1.0
+[node name="comfy_bar" type="TextureProgressBar" parent="LayerBack/progress_bars/Vbox/TextureRect3" unique_id=1628328660]
+layout_mode = 0
+offset_left = 37.0
+offset_top = 36.999992
+offset_right = 263.0
+offset_bottom = 75.99999
+value = 100.0
+nine_patch_stretch = true
+texture_progress = ExtResource("4_lw85q")
 
 [node name="LayerFront" type="CanvasLayer" parent="." unique_id=408346995]
 layer = 2
