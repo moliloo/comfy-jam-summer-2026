@@ -8,6 +8,7 @@ var SPEED: float = 400;
 var direction: Vector2 = Vector2(0, 0);
 var interacting : bool = false
 var ended_animation := true
+var working := "_work" # "" or "_work"
 
 func _ready() -> void:
 	if GlobalVariables.get_player_position():
@@ -17,42 +18,44 @@ func _ready() -> void:
 func _process(_delta: float) -> void:
 	move_player()
 
+func ret(): 
+	print("ret")
+	interacting = false
+	sprite.animation_finished.disconnect(ret)
+
 func move_player() -> void:
 	if Input.is_action_just_pressed("interact"):
-		interacting = true
-		sprite.play("collecting_" + sprite.animation)
-		sprite.animation_finished.connect(func rev(): interacting = false)
+		if working == "_work":
+			interacting = true
+			sprite.play("collecting_" + sprite.animation)
+			sprite.animation_finished.connect(ret)
 	if interacting:
 		return
 	if Input.is_action_pressed('move_right'):
-		if ended_animation:
-			sprite.play("walk_right")
-		#sprite.flip_h = false;
 		direction.x = 1;
 	elif Input.is_action_pressed('move_left'):
-		if ended_animation:
-			sprite.play("walk_left")
-		#sprite.flip_h = true;
 		direction.x = -1;
 	else: 
 		direction.x = 0;
 
 	if Input.is_action_pressed('move_up'):
-		sprite.play("walk_up")
-		ended_animation = false
 		direction.y = -1;
 	elif Input.is_action_pressed('move_down'):
-		sprite.play("walk_down")
-		ended_animation = false
 		direction.y = 1;
 	else: 
 		direction.y = 0;
-	# anims
-	if  direction == Vector2(0,0):
-		sprite.frame = 0
-	if sprite.animation in ["walk_down","walk_up"] and direction.y == 0:
-		ended_animation = true
 	
+	match direction:
+		Vector2(1,0): sprite.play("walk_right" + working)
+		Vector2(-1,0): sprite.play("walk_left" + working)
+		Vector2(0,1): sprite.play("walk_down" + working)
+		Vector2(0,-1): sprite.play("walk_up" + working)
+		Vector2(1,1): sprite.play("walk_down" + working)
+		Vector2(1,-1): sprite.play("walk_up" + working)
+		Vector2(-1,1): sprite.play("walk_down" + working)
+		Vector2(-1,-1): sprite.play("walk_up" + working)
+		Vector2(0,0): sprite.frame = 0
+		_: print("error",direction)
 	velocity = direction.normalized() * SPEED;
 	move_and_slide();
 
