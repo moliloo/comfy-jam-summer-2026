@@ -19,7 +19,6 @@ func _process(_delta: float) -> void:
 	move_player()
 
 func ret(): 
-	print("ret")
 	interacting = false
 	sprite.animation_finished.disconnect(ret)
 
@@ -29,8 +28,10 @@ func move_player() -> void:
 			interacting = true
 			sprite.play("collecting_" + sprite.animation)
 			sprite.animation_finished.connect(ret)
+	
 	if interacting:
 		return
+	
 	if Input.is_action_pressed('move_right'):
 		direction.x = 1;
 	elif Input.is_action_pressed('move_left'):
@@ -55,7 +56,7 @@ func move_player() -> void:
 		Vector2(-1,1): sprite.play("walk_down" + working)
 		Vector2(-1,-1): sprite.play("walk_up" + working)
 		Vector2(0,0): sprite.frame = 0
-		_: print("error",direction)
+		_: print("error file player.gd player movement animation",direction)
 	velocity = direction.normalized() * SPEED;
 	move_and_slide();
 

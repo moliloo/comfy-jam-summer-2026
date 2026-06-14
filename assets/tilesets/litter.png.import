@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://71qybbsvx5vk"
-path="res://.godot/imported/MCBackCasual.png-691ba694b5738c97368f45eca7e2538b.ctex"
+uid="uid://bk566mpqy35tw"
+path="res://.godot/imported/litter.png-680d8791af69aa24a648ef3e1777f3d0.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/MCAnimations/MCBackCasual.png"
-dest_files=["res://.godot/imported/MCBackCasual.png-691ba694b5738c97368f45eca7e2538b.ctex"]
+source_file="res://assets/tilesets/litter.png"
+dest_files=["res://.godot/imported/litter.png-680d8791af69aa24a648ef3e1777f3d0.ctex"]
 
 [params]
 

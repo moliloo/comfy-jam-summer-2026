@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://s62ce8ni0753"
-path="res://.godot/imported/rugs.png-7444ee5d23c9f8d43c8b2ebf2f45a4a0.ctex"
+uid="uid://346qwjeogbc3"
+path="res://.godot/imported/bubble_16.png-d43157b63f34b5acf83863b58f16f9e0.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/scenes/rugs.png"
-dest_files=["res://.godot/imported/rugs.png-7444ee5d23c9f8d43c8b2ebf2f45a4a0.ctex"]
+source_file="res://assets/aquarium/bubble_16.png"
+dest_files=["res://.godot/imported/bubble_16.png-d43157b63f34b5acf83863b58f16f9e0.ctex"]
 
 [params]
 

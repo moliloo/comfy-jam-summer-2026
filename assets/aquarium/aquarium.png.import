@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://dx1btbr62kx1u"
-path="res://.godot/imported/CollectingBack.png-ea0e7fac018c62f2bedb99824d1fd878.ctex"
+uid="uid://bb25i7b2rfwy6"
+path="res://.godot/imported/aquarium.png-2f6be82e96afaaaa3f4058d16480d6f4.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/MCAnimations/CollectingBack.png"
-dest_files=["res://.godot/imported/CollectingBack.png-ea0e7fac018c62f2bedb99824d1fd878.ctex"]
+source_file="res://assets/aquarium/aquarium.png"
+dest_files=["res://.godot/imported/aquarium.png-2f6be82e96afaaaa3f4058d16480d6f4.ctex"]
 
 [params]
 

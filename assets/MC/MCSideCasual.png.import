@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://bk566mpqy35tw"
-path="res://.godot/imported/litter.png-c17049ddefa2ac8bfb3274eefffd3113.ctex"
+uid="uid://cwnbuqcd8yl2t"
+path="res://.godot/imported/MCSideCasual.png-95a68b41460e7ecec75ed02a1300cbd6.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/scenes/litter.png"
-dest_files=["res://.godot/imported/litter.png-c17049ddefa2ac8bfb3274eefffd3113.ctex"]
+source_file="res://assets/MC/MCSideCasual.png"
+dest_files=["res://.godot/imported/MCSideCasual.png-95a68b41460e7ecec75ed02a1300cbd6.ctex"]
 
 [params]
 

@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://c4xvl47u1gq1u"
-path="res://.godot/imported/furniture.png-bf700372cb7713d2afa3185808efd0fd.ctex"
+uid="uid://blguj0o2wbf2i"
+path="res://.godot/imported/house.png-5cfd606a4f12634feaee857c5ad6e5e6.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/scenes/furniture.png"
-dest_files=["res://.godot/imported/furniture.png-bf700372cb7713d2afa3185808efd0fd.ctex"]
+source_file="res://assets/tilesets/house.png"
+dest_files=["res://.godot/imported/house.png-5cfd606a4f12634feaee857c5ad6e5e6.ctex"]
 
 [params]
 

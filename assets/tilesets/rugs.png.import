@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://346qwjeogbc3"
-path="res://.godot/imported/bubble_16.png-857db0d8417a567184858f4a276ba7d5.ctex"
+uid="uid://s62ce8ni0753"
+path="res://.godot/imported/rugs.png-9039f8f82ab1c7fd936617cec5e17ba2.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/cute_horror/aquarium/bubble_16.png"
-dest_files=["res://.godot/imported/bubble_16.png-857db0d8417a567184858f4a276ba7d5.ctex"]
+source_file="res://assets/tilesets/rugs.png"
+dest_files=["res://.godot/imported/rugs.png-9039f8f82ab1c7fd936617cec5e17ba2.ctex"]
 
 [params]
 

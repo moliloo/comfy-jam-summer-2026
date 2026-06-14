@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://bb25i7b2rfwy6"
-path="res://.godot/imported/aquarium.png-ebf64e2521b5e43506d18db066f29ffe.ctex"
+uid="uid://bcwghfekkrn1h"
+path="res://.godot/imported/MCFront.png-62a9014e12f2a480f3580e0c10863eeb.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/cute_horror/aquarium/aquarium.png"
-dest_files=["res://.godot/imported/aquarium.png-ebf64e2521b5e43506d18db066f29ffe.ctex"]
+source_file="res://assets/MC/MCFront.png"
+dest_files=["res://.godot/imported/MCFront.png-62a9014e12f2a480f3580e0c10863eeb.ctex"]
 
 [params]
 
