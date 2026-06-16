@@ -107,6 +107,8 @@ texture = ExtResource("2_64oux")
 [sub_resource type="TileSet" id="TileSet_tdq1v"]
 sources/0 = SubResource("TileSetAtlasSource_43n2k")
 
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_64oux"]
+
 [node name="Beach" type="Node2D" unique_id=59418411]
 
 [node name="beach" type="TileMapLayer" parent="." unique_id=664705616]
@@ -116,3 +118,11 @@ tile_set = SubResource("TileSet_wvdmf")
 [node name="trash" type="TileMapLayer" parent="." unique_id=189800767]
 tile_map_data = PackedByteArray("AAACAAoAAAAEAAAAAAAMAAYAAAACAAAAAAAKAAIAAAACAAAAAAAQAAQAAAAEAAAAAAACAAgAAAADAAAAAAD+/wUAAAAEAAAAAAD+/wEAAAAAAAAAAAADAP//AAADAAAAAAAIAAoAAAAEAAAAAAALAAkAAAAAAAAAAAA=")
 tile_set = SubResource("TileSet_tdq1v")
+
+[node name="TransitionAreas" type="Node2D" parent="." unique_id=808631099]
+
+[node name="ExitDoorArea" type="Area2D" parent="TransitionAreas" unique_id=1566282172]
+position = Vector2(56, -75)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="TransitionAreas/ExitDoorArea" unique_id=2088250273]
+shape = SubResource("RectangleShape2D_64oux")

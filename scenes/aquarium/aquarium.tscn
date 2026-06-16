@@ -1,7 +1,11 @@
 [gd_scene format=3 uid="uid://cgepphevhcbu8"]
 
-[ext_resource type="Texture2D" uid="uid://d3tb5yh4cc8n" path="res://assets/temporary/fish.jpg" id="1_geiin"]
 [ext_resource type="Script" uid="uid://x3yrdcmoaoge" path="res://scenes/aquarium/aquarium.gd" id="1_q51gr"]
+[ext_resource type="Texture2D" uid="uid://c4xvl47u1gq1u" path="res://assets/tilesets/furniture.png" id="2_feubu"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_jtits"]
+atlas = ExtResource("2_feubu")
+region = Rect2(49, 42, 30, 35)
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_geiin"]
 radius = 213.00938
@@ -10,10 +14,10 @@ radius = 213.00938
 script = ExtResource("1_q51gr")
 
 [node name="Sprite2D" type="Sprite2D" parent="." unique_id=1716742679]
-scale = Vector2(0.2, 0.2)
-texture = ExtResource("1_geiin")
+texture = SubResource("AtlasTexture_jtits")
 
 [node name="Area2D" type="Area2D" parent="." unique_id=1528318079]
+scale = Vector2(0.12000008, 0.12000008)
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D" unique_id=1492652321]
 shape = SubResource("CircleShape2D_geiin")

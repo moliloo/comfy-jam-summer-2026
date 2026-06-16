@@ -1,7 +1,11 @@
 [gd_scene format=3 uid="uid://bijp5ebkpa37"]
 
 [ext_resource type="Script" uid="uid://b8awtlb270aa1" path="res://scenes/items/bed/bed.gd" id="1_38lpk"]
-[ext_resource type="Texture2D" uid="uid://bbj8e0vp5h4ky" path="res://assets/temporary/bed.png" id="1_76j41"]
+[ext_resource type="Texture2D" uid="uid://c4xvl47u1gq1u" path="res://assets/tilesets/furniture.png" id="2_5fn52"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_3pitq"]
+atlas = ExtResource("2_5fn52")
+region = Rect2(0, 0, 32, 48)
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_38lpk"]
 radius = 134.97408
@@ -10,9 +14,10 @@ radius = 134.97408
 script = ExtResource("1_38lpk")
 
 [node name="Sprite2D" type="Sprite2D" parent="." unique_id=1913970390]
-texture = ExtResource("1_76j41")
+texture = SubResource("AtlasTexture_3pitq")
 
 [node name="Area2D" type="Area2D" parent="." unique_id=1897005259]
+scale = Vector2(0.12000315, 0.12000315)
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D" unique_id=321353285]
 shape = SubResource("CircleShape2D_38lpk")
