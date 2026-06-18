@@ -176,13 +176,21 @@ position = Vector2(56, -75)
 [node name="CollisionShape2D" type="CollisionShape2D" parent="TransitionAreas/ExitDoorArea" unique_id=252457172]
 shape = SubResource("RectangleShape2D_wusmn")
 
-[node name="BathroomDoorArea" type="Area2D" parent="TransitionAreas/ExitDoorArea" unique_id=989255035]
-position = Vector2(-80, -3)
+[node name="BathroomDoorArea" type="Area2D" parent="TransitionAreas" unique_id=989255035]
+position = Vector2(-24, -78)
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="TransitionAreas/ExitDoorArea/BathroomDoorArea" unique_id=826355436]
+[node name="CollisionShape2D" type="CollisionShape2D" parent="TransitionAreas/BathroomDoorArea" unique_id=826355436]
 shape = SubResource("RectangleShape2D_wusmn")
+
+[node name="Spawnpoints" type="Node2D" parent="." unique_id=135234634]
+
+[node name="FromBeach" type="Marker2D" parent="Spawnpoints" unique_id=1680437288]
+position = Vector2(56, -75)
+
+[node name="FromBathroom" type="Marker2D" parent="Spawnpoints" unique_id=772214020]
+position = Vector2(-24, -78)
 
 [connection signal="body_entered" from="TransitionAreas/ExitDoorArea" to="." method="_on_exit_door_area_body_entered"]
 [connection signal="body_exited" from="TransitionAreas/ExitDoorArea" to="." method="_on_exit_door_area_body_exited"]
-[connection signal="body_entered" from="TransitionAreas/ExitDoorArea/BathroomDoorArea" to="." method="_on_bathroom_door_area_body_entered"]
-[connection signal="body_exited" from="TransitionAreas/ExitDoorArea/BathroomDoorArea" to="." method="_on_bathroom_door_area_body_exited"]
+[connection signal="body_entered" from="TransitionAreas/BathroomDoorArea" to="." method="_on_bathroom_door_area_body_entered"]
+[connection signal="body_exited" from="TransitionAreas/BathroomDoorArea" to="." method="_on_bathroom_door_area_body_exited"]

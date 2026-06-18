@@ -145,5 +145,10 @@ position = Vector2(-14, 25)
 [node name="CollisionShape2D" type="CollisionShape2D" parent="TransitionAreas/Area2D" unique_id=1274226458]
 shape = SubResource("RectangleShape2D_o26e3")
 
+[node name="Spawnpoints" type="Node2D" parent="." unique_id=1081043327]
+
+[node name="FromHouse" type="Marker2D" parent="Spawnpoints" unique_id=402782571]
+position = Vector2(-15, 25)
+
 [connection signal="body_entered" from="TransitionAreas/Area2D" to="." method="_on_area_2d_body_entered"]
 [connection signal="body_exited" from="TransitionAreas/Area2D" to="." method="_on_area_2d_body_exited"]
