@@ -1,0 +1,154 @@
+[gd_scene format=4 uid="uid://dtqugiac56frd"]
+
+[ext_resource type="Texture2D" uid="uid://blguj0o2wbf2i" path="res://assets/tilesets/house.png" id="1_axuyv"]
+[ext_resource type="Script" uid="uid://dupr8ikq3n332" path="res://scenes/bathroom/bathroom.gd" id="1_h6ury"]
+[ext_resource type="Texture2D" uid="uid://s62ce8ni0753" path="res://assets/tilesets/rugs.png" id="2_h6ury"]
+[ext_resource type="Texture2D" uid="uid://c4xvl47u1gq1u" path="res://assets/tilesets/furniture.png" id="3_o26e3"]
+
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_mu44a"]
+texture = ExtResource("1_axuyv")
+0:0/0 = 0
+1:0/0 = 0
+2:0/0 = 0
+4:0/0 = 0
+0:1/0 = 0
+2:1/0 = 0
+3:1/0 = 0
+4:1/0 = 0
+0:2/0 = 0
+1:2/0 = 0
+2:2/0 = 0
+3:2/0 = 0
+4:2/0 = 0
+
+[sub_resource type="TileSet" id="TileSet_5abgw"]
+sources/0 = SubResource("TileSetAtlasSource_mu44a")
+
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_cic4x"]
+texture = ExtResource("2_h6ury")
+2:1/0 = 0
+0:2/0 = 0
+0:1/0 = 0
+1:2/0 = 0
+1:1/0 = 0
+1:0/0 = 0
+0:0/0 = 0
+3:1/0 = 0
+3:2/0 = 0
+2:2/0 = 0
+2:3/0 = 0
+3:3/0 = 0
+3:4/0 = 0
+2:4/0 = 0
+4:1/0 = 0
+5:1/0 = 0
+6:1/0 = 0
+2:0/0 = 0
+3:0/0 = 0
+
+[sub_resource type="TileSet" id="TileSet_0upew"]
+sources/0 = SubResource("TileSetAtlasSource_cic4x")
+
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_poqkt"]
+texture = ExtResource("3_o26e3")
+0:0/0 = 0
+1:0/0 = 0
+2:0/0 = 0
+3:0/0 = 0
+4:0/0 = 0
+5:0/0 = 0
+6:0/0 = 0
+7:0/0 = 0
+8:0/0 = 0
+0:1/0 = 0
+1:1/0 = 0
+2:1/0 = 0
+3:1/0 = 0
+4:1/0 = 0
+5:1/0 = 0
+6:1/0 = 0
+7:1/0 = 0
+8:1/0 = 0
+0:2/0 = 0
+1:2/0 = 0
+2:2/0 = 0
+3:2/0 = 0
+4:2/0 = 0
+5:2/0 = 0
+6:2/0 = 0
+0:3/0 = 0
+1:3/0 = 0
+2:3/0 = 0
+3:3/0 = 0
+4:3/0 = 0
+5:3/0 = 0
+7:3/0 = 0
+8:3/0 = 0
+9:3/0 = 0
+0:4/0 = 0
+1:4/0 = 0
+2:4/0 = 0
+3:4/0 = 0
+4:4/0 = 0
+5:4/0 = 0
+6:4/0 = 0
+8:4/0 = 0
+9:4/0 = 0
+0:5/0 = 0
+1:5/0 = 0
+2:5/0 = 0
+3:5/0 = 0
+4:5/0 = 0
+5:5/0 = 0
+6:5/0 = 0
+7:5/0 = 0
+8:5/0 = 0
+9:5/0 = 0
+0:6/0 = 0
+1:6/0 = 0
+2:6/0 = 0
+3:6/0 = 0
+4:6/0 = 0
+5:6/0 = 0
+6:6/0 = 0
+7:6/0 = 0
+8:6/0 = 0
+9:6/0 = 0
+
+[sub_resource type="TileSet" id="TileSet_0p2kq"]
+sources/0 = SubResource("TileSetAtlasSource_poqkt")
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_o26e3"]
+
+[node name="Bathroom" type="Node2D" unique_id=1562998502]
+script = ExtResource("1_h6ury")
+
+[node name="Tilesets" type="Node2D" parent="." unique_id=2116135390]
+
+[node name="House" type="TileMapLayer" parent="Tilesets" unique_id=1410717195]
+tile_map_data = PackedByteArray("AAD/////AAAEAAIAAAD//wAAAAAEAAIAAAAAAAAAAAAEAAIAAAAAAP//AAAEAAIAAAAAAP7/AAAEAAIAAAD///7/AAAEAAIAAAD//wEAAAAEAAIAAAAAAAEAAAAEAAIAAAABAAEAAAAEAAIAAAABAAAAAAAEAAIAAAABAP//AAAEAAIAAAABAP7/AAAEAAIAAAD+//7/AAAEAAIAAAD+////AAAEAAIAAAD+/wAAAAAEAAIAAAD+/wEAAAAEAAIAAAACAAEAAAAEAAIAAAACAAAAAAAEAAIAAAACAP//AAAEAAIAAAACAP7/AAAEAAIAAAD+/wIAAAABAAIAAAD//wIAAAABAAIAAAAAAAIAAAABAAIAAAABAAIAAAABAAIAAAACAAIAAAABAAIAAAD9/wEAAAAAAAEAAAD9/wAAAAAAAAEAAAD9////AAAAAAEAAAD9//7/AAAAAAEAAAADAP7/AAACAAEAAAADAP//AAACAAEAAAADAAAAAAACAAEAAAADAAEAAAACAAEAAAD+//3/AAADAAEAAAD///3/AAADAAEAAAAAAP3/AAADAAEAAAABAP3/AAADAAEAAAACAP3/AAADAAEAAAD9//3/AAAAAAEAAAD9/wIAAAAAAAIAAAADAAIAAAACAAIAAAADAP3/AAACAAEAAAD+//z/AAADAAEAAAD///z/AAADAAEAAAAAAPz/AAADAAEAAAABAPz/AAADAAEAAAACAPz/AAADAAEAAAD+//v/AAADAAEAAAD///v/AAADAAEAAAAAAPv/AAADAAEAAAABAPv/AAADAAEAAAACAPv/AAADAAEAAAD9//z/AAAAAAEAAAD9//v/AAAAAAEAAAADAPz/AAACAAEAAAADAPv/AAACAAEAAAD+//r/AAABAAAAAAD///r/AAABAAAAAAAAAPr/AAABAAAAAAABAPr/AAABAAAAAAACAPr/AAABAAAAAAADAPr/AAACAAAAAAD9//r/AAAAAAAAAAA=")
+tile_set = SubResource("TileSet_5abgw")
+
+[node name="Rugs" type="TileMapLayer" parent="Tilesets" unique_id=163589380]
+tile_map_data = PackedByteArray("AAAAAP//AAAEAAEAAAABAP//AAAFAAEAAAACAP//AAAGAAEAAAD+/wAAAAACAAAAAAD+/wEAAAACAAEAAAD//wAAAAADAAAAAAD//wEAAAADAAEAAAA=")
+tile_set = SubResource("TileSet_0upew")
+
+[node name="Furniture" type="TileMapLayer" parent="Tilesets" unique_id=1266941350]
+tile_map_data = PackedByteArray("AAABAAAAAAAGAAUAAAABAAEAAAAGAAYAAAAAAPv/AAAHAAMAAAAAAP3/AAAHAAUAAAAAAP7/AAAHAAYAAAABAPv/AAAIAAMAAAABAPz/AAAIAAQAAAABAP3/AAAIAAUAAAABAP7/AAAIAAYAAAACAPv/AAAJAAMAAAACAPz/AAAJAAQAAAACAP3/AAAJAAUAAAACAP7/AAAJAAYAAAD+//3/AAAEAAUAAAD+//7/AAAEAAYAAAD///3/AAAFAAUAAAD///7/AAAFAAYAAAD+//z/AAAFAAQAAAD///z/AAAGAAQAAAA=")
+tile_set = SubResource("TileSet_0p2kq")
+
+[node name="TransitionAreas" type="Node2D" parent="." unique_id=2049269263]
+
+[node name="Area2D" type="Area2D" parent="TransitionAreas" unique_id=1912217578]
+position = Vector2(-14, 25)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="TransitionAreas/Area2D" unique_id=1274226458]
+shape = SubResource("RectangleShape2D_o26e3")
+
+[node name="Spawnpoints" type="Node2D" parent="." unique_id=1081043327]
+
+[node name="FromHouse" type="Marker2D" parent="Spawnpoints" unique_id=402782571]
+position = Vector2(-15, 25)
+
+[connection signal="body_entered" from="TransitionAreas/Area2D" to="." method="_on_area_2d_body_entered"]
+[connection signal="body_exited" from="TransitionAreas/Area2D" to="." method="_on_area_2d_body_exited"]
