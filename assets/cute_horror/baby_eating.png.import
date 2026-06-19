@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://dbuv47685x8yn"
-path="res://.godot/imported/ball.png-908e14f5d6a1674a69eb86d9eb53d3a2.ctex"
+uid="uid://bd3yum5vusa1c"
+path="res://.godot/imported/baby_eating.png-ed0a8ccb3734f81d741b8ca8613dc30d.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/cute_horror/ball.png"
-dest_files=["res://.godot/imported/ball.png-908e14f5d6a1674a69eb86d9eb53d3a2.ctex"]
+source_file="res://assets/cute_horror/baby_eating.png"
+dest_files=["res://.godot/imported/baby_eating.png-ed0a8ccb3734f81d741b8ca8613dc30d.ctex"]
 
 [params]
 

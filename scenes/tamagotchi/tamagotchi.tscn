@@ -7,6 +7,7 @@
 [ext_resource type="Texture2D" uid="uid://domdcouefu8uj" path="res://assets/ui/uibar.png" id="4_lw85q"]
 [ext_resource type="Texture2D" uid="uid://yhv5oy3qrvfp" path="res://assets/ui/ui_funBar.png" id="5_wgfew"]
 [ext_resource type="Texture2D" uid="uid://2pnltcwwijb" path="res://assets/ui/ui_comfyBar.png" id="6_q0dh5"]
+[ext_resource type="PackedScene" uid="uid://b83xot8c75sdg" path="res://scenes/cute_horror/cute_horror.tscn" id="8_q0dh5"]
 
 [node name="Tamagochi" type="Node2D" unique_id=548957400 node_paths=PackedStringArray("food_bar", "fun_bar", "comfy_bar")]
 script = ExtResource("1_a85fx")
@@ -104,6 +105,79 @@ scale = Vector2(2, 2)
 text = "Exit"
 horizontal_alignment = 1
 
+[node name="LayerLeftSide" type="CanvasLayer" parent="." unique_id=854078910]
+
+[node name="Control" type="Control" parent="LayerLeftSide" unique_id=1398308356]
+layout_mode = 3
+anchors_preset = 11
+anchor_left = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -137.0
+grow_horizontal = 0
+grow_vertical = 2
+
+[node name="VBoxContainer" type="VBoxContainer" parent="LayerLeftSide/Control" unique_id=794692729]
+layout_mode = 1
+anchors_preset = 6
+anchor_left = 1.0
+anchor_top = 0.5
+anchor_right = 1.0
+anchor_bottom = 0.5
+offset_left = -158.0
+offset_top = -79.0
+offset_bottom = 121.0
+grow_horizontal = 0
+grow_vertical = 2
+
+[node name="Food" type="Button" parent="LayerLeftSide/Control/VBoxContainer" unique_id=1344486715]
+custom_minimum_size = Vector2(0, 50)
+layout_mode = 2
+
+[node name="Label" type="Label" parent="LayerLeftSide/Control/VBoxContainer/Food" unique_id=1549911761]
+layout_mode = 0
+offset_right = 57.0
+offset_bottom = 23.0
+scale = Vector2(2, 2)
+text = "Food"
+horizontal_alignment = 1
+
+[node name="Play" type="Button" parent="LayerLeftSide/Control/VBoxContainer" unique_id=832781250]
+custom_minimum_size = Vector2(0, 50)
+layout_mode = 2
+
+[node name="Label" type="Label" parent="LayerLeftSide/Control/VBoxContainer/Play" unique_id=1077871763]
+layout_mode = 0
+offset_right = 57.0
+offset_bottom = 23.0
+scale = Vector2(2, 2)
+text = "Play"
+horizontal_alignment = 1
+
+[node name="Pet" type="Button" parent="LayerLeftSide/Control/VBoxContainer" unique_id=1026663262]
+custom_minimum_size = Vector2(0, 50)
+layout_mode = 2
+
+[node name="Label" type="Label" parent="LayerLeftSide/Control/VBoxContainer/Pet" unique_id=682661566]
+layout_mode = 0
+offset_right = 57.0
+offset_bottom = 23.0
+scale = Vector2(2, 2)
+text = "Pet"
+horizontal_alignment = 1
+
+[node name="Sleep" type="Button" parent="LayerLeftSide/Control/VBoxContainer" unique_id=203073633]
+custom_minimum_size = Vector2(0, 50)
+layout_mode = 2
+
+[node name="Label" type="Label" parent="LayerLeftSide/Control/VBoxContainer/Sleep" unique_id=2070574012]
+layout_mode = 0
+offset_right = 57.0
+offset_bottom = 23.0
+scale = Vector2(2, 2)
+text = "Sleep"
+horizontal_alignment = 1
+
 [node name="RandomActivity" type="Node" parent="." unique_id=2053293737]
 
 [node name="bubbles" type="Node2D" parent="RandomActivity" unique_id=801334849]
@@ -115,4 +189,13 @@ position = Vector2(193, 101)
 [node name="bubbles_destroy2" type="Node2D" parent="RandomActivity" unique_id=139954188]
 position = Vector2(968, 573)
 
+[node name="CuteHorror" parent="." unique_id=1194576538 node_paths=PackedStringArray("tamagochi") instance=ExtResource("8_q0dh5")]
+position = Vector2(564, 322)
+scale = Vector2(2, 2)
+tamagochi = NodePath("..")
+
 [connection signal="pressed" from="LayerFront/Button" to="." method="_on_button_pressed"]
+[connection signal="pressed" from="LayerLeftSide/Control/VBoxContainer/Food" to="." method="_on_food_pressed"]
+[connection signal="pressed" from="LayerLeftSide/Control/VBoxContainer/Play" to="." method="_on_play_pressed"]
+[connection signal="pressed" from="LayerLeftSide/Control/VBoxContainer/Pet" to="." method="_on_pet_pressed"]
+[connection signal="pressed" from="LayerLeftSide/Control/VBoxContainer/Sleep" to="." method="_on_sleep_pressed"]
